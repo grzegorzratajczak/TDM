@@ -11,6 +11,6 @@ import {ReactiveFormsModule} from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
   ],
-  exports: [CarsListComponent, AddCarComponent]
+  exports: [CarsListComponent]
 })
 export class CarsModule { }

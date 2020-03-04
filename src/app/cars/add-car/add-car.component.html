@@ -1,4 +1,4 @@
-<h2>{{carForm.get('id').value ? 'Edycja auta' : 'Dodawanie auta'}}}</h2>
+<!--<h2>{{carForm.get('id').value ? 'Edycja auta' : 'Dodawanie auta'}}}</h2>-->
 
 <form [formGroup]="carForm" (ngSubmit)="save()">
 
@@ -16,7 +16,7 @@
   </div>
   <div class="control-group">
     <label class="control-label">Upgrade</label>
-    <input type="text" formControlName="Upgrade">
+    <input type="text" formControlName="upgrade">
   </div>
   <div class="control-group">
     <label class="control-label">Tyre type</label>
