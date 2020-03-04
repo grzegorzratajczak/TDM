@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CarService} from '../car-service';
-import {Car} from '../car';
+import {Car, CarAttrs} from '../car';
 
 @Component({
   selector: 'app-car-list',
@@ -20,4 +20,11 @@ export class CarsListComponent implements OnInit {
     });
   }
 
+  deleteCarFromList(carAttrs: CarAttrs) {
+    this.carService.deleteCar(carAttrs).subscribe({
+      next: () => this.cars.splice(carAttrs.id),
+      error: () => alert('Nie udało się usunąć auta')
+      }
+    );
+  }
 }

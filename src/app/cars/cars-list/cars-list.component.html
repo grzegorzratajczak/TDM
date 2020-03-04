@@ -1,4 +1,4 @@
 <h2>Lista twoich aut</h2>
 <div *ngFor="let car of cars">
-  Nazwa: {{car.name}} Koszt:{{car.cost}}
+  Nazwa: {{car.name}} Koszt:{{car.cost}}<button (click)="deleteCarFromList(car)">Usuń</button>
 </div>

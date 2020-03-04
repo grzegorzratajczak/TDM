@@ -32,4 +32,10 @@ export class CarService {
       map((carAttrs) => new Car(carAttrs))
     );
   }
+
+  deleteCar(data: CarAttrs): Observable<Car> {
+    return this.httpClient.delete(`${environment.apiUrl}/cars/${data.id}`).pipe(
+      map((carAttrs) => new Car(carAttrs))
+    );
+  }
 }
