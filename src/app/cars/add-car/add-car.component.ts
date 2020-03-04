@@ -16,4 +16,12 @@ export class AddCarComponent implements OnInit {
   ngOnInit() {
   }
 
+  save(): void {
+    const carAttrs = this.carForm.value;
+    this.carService.saveCar(carAttrs).subscribe(
+      () => alert('auto zapisane' + carAttrs),
+      () => alert('Nie udało się zapisać pilota')
+    );
+  }
+
 }

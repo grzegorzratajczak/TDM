@@ -1,1 +1,98 @@
-<h2>Dodaj/Edytuj auto</h2>
+<h2>{{carForm.get('id').value ? 'Edycja auta' : 'Dodawanie auta'}}}</h2>
+
+<form [formGroup]="carForm" (ngSubmit)="save()">
+
+  <div class="control-group">
+    <label class="control-label">Factory</label>
+    <input type="text" formControlName="factory">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Name</label>
+    <input type="text" formControlName="name">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Cost</label>
+    <input type="text" formControlName="cost">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Upgrade</label>
+    <input type="text" formControlName="Upgrade">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Tyre type</label>
+    <input type="text" formControlName="tyreType">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Top speed</label>
+    <input type="text" formControlName="topSpeed">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Acceleration</label>
+    <input type="text" formControlName="acceleration">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Handling</label>
+    <input type="text" formControlName="handling">
+  </div>
+  <div class="control-group">
+    <label class="control-label">driveTraction</label>
+    <input type="text" formControlName="driveTraction">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Weight</label>
+    <input type="text" formControlName="weight">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Width</label>
+    <input type="text" formControlName="width">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Height</label>
+    <input type="text" formControlName="height">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Ground clearance</label>
+    <input type="text" formControlName="groundClearance">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Traction Control</label>
+    <input type="text" formControlName="tractionControl">
+  </div>
+  <div class="control-group">
+    <label class="control-label">ABS</label>
+    <input type="text" formControlName="abs">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Peak power</label>
+    <input type="text" formControlName="peakPower">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Peak torque</label>
+    <input type="text" formControlName="peakTorque">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Engine position</label>
+    <input type="text" formControlName="enginePosition">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Fuel</label>
+    <input type="text" formControlName="fuel">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Body style</label>
+    <input type="text" formControlName="bodyStyle">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Seat count</label>
+    <input type="text" formControlName="seatCount">
+  </div>
+  <div class="control-group">
+    <label class="control-label">Production year</label>
+    <input type="text" formControlName="productionYear">
+  </div>
+
+
+
+  <button type="submit" [disabled]="carForm.invalid">Zapisz</button>
+  <button type="button" routerLink="../..">Anuluj</button>
+</form>
