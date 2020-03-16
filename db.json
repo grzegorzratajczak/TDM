@@ -51,6 +51,32 @@
       "seatCount": 5,
       "productionYear": 2003,
       "country": "GB"
+    },
+    {
+      "id": 6,
+      "factory": "Alfa Romeo",
+      "name": "Float",
+      "cost": 13,
+      "upgrade": "332",
+      "tyreType": "Slick",
+      "topSpeed": 132,
+      "acceleration": 8.8,
+      "handling": 75,
+      "driveTraction": "FWD",
+      "weight": 1356,
+      "width": 1.4,
+      "height": 1.4,
+      "groundClearance": "Medium",
+      "tractionControl": false,
+      "abs": false,
+      "peakPower": 121,
+      "peakTorque": 98,
+      "enginePosition": "FRONT",
+      "fuel": "Petrol",
+      "bodyStyle": "Coupe",
+      "seatCount": 5,
+      "productionYear": 2000,
+      "country": "GB"
     }
   ]
 }
