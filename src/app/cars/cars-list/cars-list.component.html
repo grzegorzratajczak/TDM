@@ -1,4 +1,33 @@
 <h2>Lista twoich aut</h2>
+
+<div class="">
+  <div>Cost</div>
+  <div>id</div>
+  <div>factory</div>
+  <div>name</div>
+  <div>upgrade</div>
+  <div>tyreType</div>
+  <div>topSpeed</div>
+  <div>acceleration</div>
+  <div>handling</div>
+  <div>driveTraction</div>
+  <div>weight</div>
+  <div>width</div>
+  <div>height</div>
+  <div>groundClearance</div>
+  <div>tractionControl</div>
+  <div>abs</div>
+  <div>peakPower</div>
+  <div>peakTorque</div>
+  <div>enginePosition</div>
+  <div>fuel</div>
+  <div>bodyStyle</div>
+  <div>seatCount</div>
+  <div>productionYear</div>
+</div>
+
+
 <div *ngFor="let car of cars">
-  <app-car-list-show [car]="car"></app-car-list-show><button (click)="deleteCarFromList(car)">Usuń</button>
+  <app-car-list-show [car]="car"></app-car-list-show>
+  <button (click)="deleteCarFromList(car)">Usuń</button>
 </div>
