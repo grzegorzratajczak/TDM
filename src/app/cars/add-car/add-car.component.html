@@ -88,7 +88,12 @@
   </div>
   <div class="control-group">
     <label class="control-label">Fuel</label>
-    <input type="text" formControlName="fuel">
+    <input type="text" formControlName="fuel" list="fuels">
+    <datalist id="fuels">
+      <div *ngFor="let fuel of fuels">
+        <option [value]="fuel">
+      </div>
+    </datalist>
   </div>
   <div class="control-group">
     <label class="control-label">Body style</label>

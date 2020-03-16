@@ -14,6 +14,7 @@ export class AddCarComponent implements OnInit {
   carForm: FormGroup;
   tyreTypes: string[] = ['Slick', 'Performance', 'Standard', 'All-surface', 'Off-road'];
   groundClearances: string[] = ['Low', 'Medium', 'High'];
+  fuels: string[] = ['Diesel', 'Electro', 'Hydrogen', 'Hybrid', 'Petrol', 'Unknown'];
 
   constructor(private carService: CarService, private router: Router) {
   }
