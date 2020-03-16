@@ -15,7 +15,8 @@ export class AddCarComponent implements OnInit {
   tyreTypes: string[] = ['Slick', 'Performance', 'Standard', 'All-surface', 'Off-road'];
   groundClearances: string[] = ['Low', 'Medium', 'High'];
   fuels: string[] = ['Diesel', 'Electro', 'Hydrogen', 'Hybrid', 'Petrol', 'Unknown'];
-  countrys: string[] = ['AT', 'AU', 'DE', 'FR', 'GB', 'IT', 'JP', 'SE', 'US'];
+  countries: string[] = ['AT', 'AU', 'DE', 'FR', 'GB', 'IT', 'JP', 'SE', 'US'];
+
 
   constructor(private carService: CarService, private router: Router) {
   }
