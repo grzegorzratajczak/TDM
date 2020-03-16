@@ -42,7 +42,8 @@ export class AddCarComponent implements OnInit {
       fuel: new FormControl('', Validators.required),
       bodyStyle: new FormControl('', Validators.required),
       seatCount: new FormControl('', Validators.required),
-      productionYear: new FormControl('', Validators.required)
+      productionYear: new FormControl('', Validators.required),
+      country: new FormControl('', Validators.required)
     });
   }
 

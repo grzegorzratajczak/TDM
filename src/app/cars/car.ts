@@ -23,6 +23,7 @@ export interface CarAttrs {
   bodyStyle: string;
   seatCount: number;
   productionYear: number;
+  country: string;
 
 }
 
@@ -51,6 +52,7 @@ export class Car {
   bodyStyle: string;
   seatCount: number;
   productionYear: number;
+  country: string;
 
   constructor(carAttrs: Partial<Car> = {}) {
     this.id = carAttrs.id;
@@ -76,5 +78,6 @@ export class Car {
     this.bodyStyle = carAttrs.bodyStyle;
     this.seatCount = carAttrs.seatCount;
     this.productionYear = carAttrs.productionYear;
+    this.country = carAttrs.country;
   }
 }
