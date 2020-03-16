@@ -12,37 +12,38 @@ import {map} from 'rxjs/operators';
 export class AddCarComponent implements OnInit {
 
   carForm: FormGroup;
-  tyreTypes: string[] = ['slick', 'performance', 'standard', 'all-surface', 'off-road'];
+  tyreTypes: string[] = ['Slick', 'Performance', 'Standard', 'All-surface', 'Off-road'];
+  groundClearances: string[] = ['Low', 'Medium', 'High'];
 
   constructor(private carService: CarService, private router: Router) {
   }
 
   ngOnInit() {
-        this.carForm = new FormGroup({
-          id: new FormControl(),
-          factory: new FormControl('', Validators.required),
-          name: new FormControl('', Validators.required),
-          cost: new FormControl('', Validators.required),
-          upgrade: new FormControl('', Validators.required),
-          tyreType: new FormControl('', [Validators.required]),
-          topSpeed: new FormControl('', Validators.required),
-          acceleration: new FormControl('', Validators.required),
-          handling: new FormControl('', Validators.required),
-          driveTraction: new FormControl('', Validators.required),
-          weight: new FormControl('', Validators.required),
-          width: new FormControl('', Validators.required),
-          height: new FormControl('', Validators.required),
-          groundClearance: new FormControl('', Validators.required),
-          tractionControl: new FormControl('', Validators.required),
-          abs: new FormControl('', [Validators.required]),
-          peakPower: new FormControl('', Validators.required),
-          peakTorque: new FormControl('', Validators.required),
-          enginePosition: new FormControl('', Validators.required),
-          fuel: new FormControl('', Validators.required),
-          bodyStyle: new FormControl('', Validators.required),
-          seatCount: new FormControl('', Validators.required),
-          productionYear: new FormControl('', Validators.required)
-        });
+    this.carForm = new FormGroup({
+      id: new FormControl(),
+      factory: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      cost: new FormControl('', Validators.required),
+      upgrade: new FormControl('', Validators.required),
+      tyreType: new FormControl('', [Validators.required]),
+      topSpeed: new FormControl('', Validators.required),
+      acceleration: new FormControl('', Validators.required),
+      handling: new FormControl('', Validators.required),
+      driveTraction: new FormControl('', Validators.required),
+      weight: new FormControl('', Validators.required),
+      width: new FormControl('', Validators.required),
+      height: new FormControl('', Validators.required),
+      groundClearance: new FormControl('', Validators.required),
+      tractionControl: new FormControl('', Validators.required),
+      abs: new FormControl('', [Validators.required]),
+      peakPower: new FormControl('', Validators.required),
+      peakTorque: new FormControl('', Validators.required),
+      enginePosition: new FormControl('', Validators.required),
+      fuel: new FormControl('', Validators.required),
+      bodyStyle: new FormControl('', Validators.required),
+      seatCount: new FormControl('', Validators.required),
+      productionYear: new FormControl('', Validators.required)
+    });
   }
 
   save(): void {
