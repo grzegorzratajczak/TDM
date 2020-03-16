@@ -12,6 +12,7 @@ import {map} from 'rxjs/operators';
 export class AddCarComponent implements OnInit {
 
   carForm: FormGroup;
+  tyreTypes: string[] = ['slick', 'performance', 'standard', 'all-surface', 'off-road'];
 
   constructor(private carService: CarService, private router: Router) {
   }

@@ -20,7 +20,12 @@
   </div>
   <div class="control-group">
     <label class="control-label">Tyre type</label>
-    <input type="text" formControlName="tyreType">
+    <input type="text" formControlName="tyreType" list="tyreTypes">
+    <datalist id="tyreTypes">
+      <div *ngFor="let tyreType of tyreTypes">
+        <option [value]="tyreType">
+      </div>
+    </datalist>
   </div>
   <div class="control-group">
     <label class="control-label">Top speed</label>
@@ -92,7 +97,6 @@
     <label class="control-label">Production year</label>
     <input type="text" formControlName="productionYear">
   </div>
-
 
 
   <button type="submit" [disabled]="carForm.invalid">Zapisz</button>
