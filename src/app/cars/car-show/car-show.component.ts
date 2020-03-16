@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Car} from '../car';
+import {CarService} from '../car-service';
 
 @Component({
   selector: 'app-car-show',
@@ -10,33 +11,10 @@ export class CarShowComponent implements OnInit {
 
   @Input() car: Car;
 
-  constructor() {
+  constructor(private carService: CarService) {
   }
 
   ngOnInit() {
-  }
-
-  getCategoryColorByCarCost(carCost: number) {
-    if (carCost < 7) {
-      return 'gray';
-    }
-    if (carCost < 11) {
-      return 'green';
-    }
-    if (carCost < 15) {
-      return 'blue';
-    }
-    if (carCost < 19) {
-      return 'yellow';
-    }
-    if (carCost < 23) {
-      return 'red';
-    }
-    if (carCost < 27) {
-      return 'purple';
-    } else {
-      return 'gold';
-    }
   }
 
 }
