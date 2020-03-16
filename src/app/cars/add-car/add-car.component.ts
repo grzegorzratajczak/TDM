@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CarService} from '../car-service';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 
@@ -20,28 +20,28 @@ export class AddCarComponent implements OnInit {
   ngOnInit() {
         this.carForm = new FormGroup({
           id: new FormControl(),
-          factory: new FormControl(),
-          name: new FormControl(),
-          cost: new FormControl(),
-          upgrade: new FormControl(),
-          tyreType: new FormControl(),
-          topSpeed: new FormControl(),
-          acceleration: new FormControl(),
-          handling: new FormControl(),
-          driveTraction: new FormControl(),
-          weight: new FormControl(),
-          width: new FormControl(),
-          height: new FormControl(),
-          groundClearance: new FormControl(),
-          tractionControl: new FormControl(),
-          abs: new FormControl(),
-          peakPower: new FormControl(),
-          peakTorque: new FormControl(),
-          enginePosition: new FormControl(),
-          fuel: new FormControl(),
-          bodyStyle: new FormControl(),
-          seatCount: new FormControl(),
-          productionYear: new FormControl()
+          factory: new FormControl('', Validators.required),
+          name: new FormControl('', Validators.required),
+          cost: new FormControl('', Validators.required),
+          upgrade: new FormControl('', Validators.required),
+          tyreType: new FormControl('', [Validators.required]),
+          topSpeed: new FormControl('', Validators.required),
+          acceleration: new FormControl('', Validators.required),
+          handling: new FormControl('', Validators.required),
+          driveTraction: new FormControl('', Validators.required),
+          weight: new FormControl('', Validators.required),
+          width: new FormControl('', Validators.required),
+          height: new FormControl('', Validators.required),
+          groundClearance: new FormControl('', Validators.required),
+          tractionControl: new FormControl('', Validators.required),
+          abs: new FormControl('', [Validators.required]),
+          peakPower: new FormControl('', Validators.required),
+          peakTorque: new FormControl('', Validators.required),
+          enginePosition: new FormControl('', Validators.required),
+          fuel: new FormControl('', Validators.required),
+          bodyStyle: new FormControl('', Validators.required),
+          seatCount: new FormControl('', Validators.required),
+          productionYear: new FormControl('', Validators.required)
         });
   }
 
