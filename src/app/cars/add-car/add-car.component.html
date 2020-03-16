@@ -46,7 +46,12 @@
   </div>
   <div class="control-group">
     <label class="control-label">driveTraction</label>
-    <input type="text" formControlName="driveTraction">
+    <input type="text" formControlName="driveTraction" list="driveTractions">
+    <datalist id="driveTractions">
+      <div *ngFor="let driveTraction of driveTractions">
+        <option [value]="driveTraction">
+      </div>
+    </datalist>
   </div>
   <div class="control-group">
     <label class="control-label">Weight</label>

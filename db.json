@@ -74,6 +74,32 @@
       "bodyStyle": "asfs",
       "seatCount": 3,
       "productionYear": 324
+    },
+    {
+      "id": 4,
+      "factory": "McLaren",
+      "name": "McLaren C12",
+      "cost": 29,
+      "upgrade": "323",
+      "tyreType": "Performance",
+      "topSpeed": 210,
+      "acceleration": 2.8,
+      "handling": 92,
+      "driveTraction": "RWD",
+      "weight": 1230,
+      "width": 1,
+      "height": 1.4,
+      "groundClearance": "Low",
+      "tractionControl": true,
+      "abs": false,
+      "peakPower": 620,
+      "peakTorque": 515,
+      "enginePosition": "mid",
+      "fuel": "Petrol",
+      "bodyStyle": "sport",
+      "seatCount": 2,
+      "productionYear": 2000,
+      "country": "IT"
     }
   ]
 }

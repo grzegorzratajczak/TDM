@@ -21,6 +21,7 @@ export class AddCarComponent implements OnInit {
     'Jaguar', 'KTM', 'Lamborghini', 'Lancia', 'Land Rover', 'Lotus', 'Maserati', 'Mazda', 'McLaren', 'Mercedes-Benz', 'MG', 'Mini',
     'Mitsubishi', 'Nissan', 'Pagani', 'Peugeot', 'Plymouth', 'Pontiac', 'Porshe', 'Ram', 'Renault', 'Rover', 'RUF', 'Scuderia Cameron',
     'Smart', 'Subaru', 'Suzuki', 'TVR', 'Vauxhall/Opel', 'Volvo', 'Volkswagen'];
+  driveTractions: string[] = ['FWD', 'RWD', '4WD'];
 
   constructor(private carService: CarService, private router: Router) {
   }
