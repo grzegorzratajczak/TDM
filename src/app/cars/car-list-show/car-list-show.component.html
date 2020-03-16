@@ -13,8 +13,8 @@
   <div>{{car.width}}</div>
   <div>{{car.height}}</div>
   <div>{{car.groundClearance}}</div>
-  <div>{{car.tractionControl}}</div>
-  <div>{{car.abs}}</div>
+  <div class="property" [class.active]="car.tractionControl">TractionControl</div>
+  <div class="property" [class.active]="car.abs">ABS</div>
   <div>{{car.peakPower}}</div>
   <div>{{car.peakTorque}}</div>
   <div>{{car.enginePosition}}</div>
