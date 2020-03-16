@@ -4,7 +4,12 @@
 
   <div class="control-group">
     <label class="control-label">Factory</label>
-    <input type="text" formControlName="factory">
+    <input type="text" formControlName="factory" list="factories">
+    <datalist id="factories">
+      <div *ngFor="let factory of factories">
+        <option [value]="factory">
+      </div>
+    </datalist>
   </div>
   <div class="control-group">
     <label class="control-label">Name</label>
