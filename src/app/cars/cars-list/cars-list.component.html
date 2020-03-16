@@ -30,5 +30,7 @@
 
 <div *ngFor="let car of cars">
   <app-car-list-show [car]="car"></app-car-list-show>
-  <button (click)="deleteCarFromList(car)">Usuń</button>
+  <div>
+    <button (click)="deleteCarFromList(car)">Usuń</button>
+  </div>
 </div>
