@@ -1,23 +1,25 @@
-id: {{car.id}}
-factory: {{car.factory}}
-name: {{car.name}}
-cost: {{car.cost}}
-upgrade: {{car.upgrade}}
-tyreType: {{car.tyreType}}
-topSpeed: {{car.topSpeed}}
-acceleration: {{car.acceleration}}
-handling: {{car.handling}}
-driveTraction: {{car.driveTraction}}
-weight: {{car.weight}}
-width: {{car.width}}
-height: {{car.height}}
-groundClearance: {{car.groundClearance}}
-tractionControl: {{car.tractionControl}}
-abs: {{car.abs}}
-peakPower: {{car.peakPower}}
-peakTorque: {{car.peakTorque}}
-enginePosition: {{car.enginePosition}}
-fuel: {{car.fuel}}
-bodyStyle: {{car.bodyStyle}}
-seatCount: {{car.seatCount}}
-productionYear: {{car.productionYear}}
+<div>
+  <div [style.background-color]="getCategoryColorByCarCost(car.cost)">{{car.cost}}</div>
+  <div>id: {{car.id}}</div>
+  <div>factory: {{car.factory}}</div>
+  <div>name: {{car.name}}</div>
+  <div>upgrade: {{car.upgrade}}</div>
+  <div>tyreType: {{car.tyreType}}</div>
+  <div>topSpeed: {{car.topSpeed}}</div>
+  <div>acceleration: {{car.acceleration}}</div>
+  <div>handling: {{car.handling}}</div>
+  <div>driveTraction: {{car.driveTraction}}</div>
+  <div>weight: {{car.weight}}</div>
+  <div>width: {{car.width}}</div>
+  <div>height: {{car.height}}</div>
+  <div>groundClearance: {{car.groundClearance}}</div>
+  <div>tractionControl: {{car.tractionControl}}</div>
+  <div>abs: {{car.abs}}</div>
+  <div>peakPower: {{car.peakPower}}</div>
+  <div>peakTorque: {{car.peakTorque}}</div>
+  <div>enginePosition: {{car.enginePosition}}</div>
+  <div>fuel: {{car.fuel}}</div>
+  <div>bodyStyle: {{car.bodyStyle}}</div>
+  <div>seatCount: {{car.seatCount}}</div>
+  <div>productionYear: {{car.productionYear}}</div>
+</div>
