@@ -26,5 +26,6 @@ export class CarsListComponent implements OnInit {
       error: () => alert('Nie udało się usunąć auta')
       }
     );
+    location.reload();
   }
 }
