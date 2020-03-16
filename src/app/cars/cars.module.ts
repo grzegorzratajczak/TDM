@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { AddCarComponent } from './add-car/add-car.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CarShowComponent } from './car-show/car-show.component';
 
 
 @NgModule({
-  declarations: [CarsListComponent, AddCarComponent],
+  declarations: [CarsListComponent, AddCarComponent, CarShowComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
