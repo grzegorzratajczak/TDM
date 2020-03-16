@@ -23,6 +23,7 @@ export class AddCarComponent implements OnInit {
     'Smart', 'Subaru', 'Suzuki', 'TVR', 'Vauxhall/Opel', 'Volvo', 'Volkswagen'];
   driveTractions: string[] = ['FWD', 'RWD', '4WD'];
   bodyStyles: string[] = ['Cabrio', 'Coupe', 'Hatchback', 'Minivan', 'Pickup', 'Roadster', 'Sedan', 'SUV', 'Wagon', 'Van'];
+  enginePositions: string[] = ['FRONT', 'MID', 'REAR'];
 
   constructor(private carService: CarService, private router: Router) {
   }
