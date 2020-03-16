@@ -1,4 +1,4 @@
 <h2>Lista twoich aut</h2>
 <div *ngFor="let car of cars">
-  <app-car-show [car]="car"></app-car-show><button (click)="deleteCarFromList(car)">Usuń</button>
+  <app-car-list-show [car]="car"></app-car-list-show><button (click)="deleteCarFromList(car)">Usuń</button>
 </div>
