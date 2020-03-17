@@ -28,4 +28,8 @@ export class CarsListComponent implements OnInit {
     );
     location.reload();
   }
+
+  editCar(car: Car) {
+
+  }
 }

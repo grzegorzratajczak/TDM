@@ -3,6 +3,7 @@ import {CarService} from '../car-service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
+import {CarPropertiesService} from '../car-properties.service';
 
 @Component({
   selector: 'app-add-car',
@@ -12,23 +13,28 @@ import {map} from 'rxjs/operators';
 export class AddCarComponent implements OnInit {
 
   carForm: FormGroup;
-  tyreTypes: string[] = ['Slick', 'Performance', 'Standard', 'All-surface', 'Off-road'];
-  groundClearances: string[] = ['Low', 'Medium', 'High'];
-  fuels: string[] = ['Diesel', 'Electro', 'Hydrogen', 'Hybrid', 'Petrol', 'Unknown'];
-  countries: string[] = ['AT', 'AU', 'DE', 'FR', 'GB', 'IT', 'JP', 'SE', 'US'];
-  factories: string[] = ['Acura', 'Alfa Romeo', 'Audi', 'Ariel', 'Aston Martin', 'Austin', 'Bentley', 'BMW', 'Bugatti', 'Buick',
-    'Cadillac', 'Caterham', 'Chevrolet', 'Chrysler', 'Citroen', 'Dodge', 'DS', 'Fiat', 'Ford', 'GMC', 'Honda', 'Hummer', 'Infiniti',
-    'Jaguar', 'KTM', 'Lamborghini', 'Lancia', 'Land Rover', 'Lotus', 'Maserati', 'Mazda', 'McLaren', 'Mercedes-Benz', 'MG', 'Mini',
-    'Mitsubishi', 'Nissan', 'Pagani', 'Peugeot', 'Plymouth', 'Pontiac', 'Porshe', 'Ram', 'Renault', 'Rover', 'RUF', 'Scuderia Cameron',
-    'Smart', 'Subaru', 'Suzuki', 'TVR', 'Vauxhall/Opel', 'Volvo', 'Volkswagen'];
-  driveTractions: string[] = ['FWD', 'RWD', '4WD'];
-  bodyStyles: string[] = ['Cabrio', 'Coupe', 'Hatchback', 'Minivan', 'Pickup', 'Roadster', 'Sedan', 'SUV', 'Wagon', 'Van'];
-  enginePositions: string[] = ['FRONT', 'MID', 'REAR'];
+  tyreTypes: string[];
+  groundClearances: string[];
+  fuels: string[];
+  countries: string[];
+  factories: string[];
+  driveTractions: string[];
+  bodyStyles: string[];
+  enginePositions: string[];
 
-  constructor(private carService: CarService, private router: Router) {
+  constructor(private carService: CarService, private router: Router, private carPropertiesService: CarPropertiesService) {
   }
 
   ngOnInit() {
+    this.tyreTypes = this.carPropertiesService.tyreTypes;
+    this.groundClearances = this.carPropertiesService.groundClearances;
+    this.fuels = this.carPropertiesService.fuels;
+    this.countries = this.carPropertiesService.countries;
+    this.factories = this.carPropertiesService.factories;
+    this.driveTractions = this.carPropertiesService.driveTractions;
+    this.bodyStyles = this.carPropertiesService.bodyStyles;
+    this.enginePositions = this.carPropertiesService.enginePositions;
+
     this.carForm = new FormGroup({
       id: new FormControl(),
       factory: new FormControl('', Validators.required),
