@@ -77,6 +77,32 @@
       "seatCount": 5,
       "productionYear": 2000,
       "country": "GB"
+    },
+    {
+      "id": 7,
+      "factory": "Aston Martin",
+      "name": "dgsg",
+      "cost": 15,
+      "upgrade": "323",
+      "tyreType": "All-surface",
+      "topSpeed": 161,
+      "acceleration": 7,
+      "handling": 63,
+      "driveTraction": "4WD",
+      "weight": 2042,
+      "width": 1.6,
+      "height": 1.4,
+      "groundClearance": "Medium",
+      "tractionControl": false,
+      "abs": true,
+      "peakPower": 746,
+      "peakTorque": 596,
+      "enginePosition": "FRONT",
+      "fuel": "Hydrogen",
+      "bodyStyle": "Minivan",
+      "seatCount": 4,
+      "productionYear": 1974,
+      "country": "JP"
     }
   ]
 }

@@ -34,11 +34,11 @@
   </div>
   <div class="control-group">
     <label class="control-label">Top speed</label>
-    <input type="number" formControlName="topSpeed">
+    <input type="range" formControlName="topSpeed" min="50" max="280">{{carForm.get('topSpeed').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Acceleration</label>
-    <input type="range" formControlName="acceleration" min="1" max="50" step="0.1">{{carForm.get('acceleration').value}}
+    <input type="range" formControlName="acceleration" min="2.1" max="35" step="0.1">{{carForm.get('acceleration').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Handling</label>
@@ -55,15 +55,15 @@
   </div>
   <div class="control-group">
     <label class="control-label">Weight</label>
-    <input type="number" formControlName="weight">
+    <input type="range" formControlName="weight" min="315" max="3775">{{carForm.get('weight').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Width</label>
-    <input type="number" formControlName="width">
+    <input type="range" formControlName="width" min="1.2" max="2.2" step="0.1">{{carForm.get('width').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Height</label>
-    <input type="number" formControlName="height">
+    <input type="range" formControlName="height" min="0.9" max="2.2" step="0.1">{{carForm.get('height').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Ground clearance</label>
@@ -86,11 +86,11 @@
   </div>
   <div class="control-group">
     <label class="control-label">Peak power</label>
-    <input type="number" formControlName="peakPower">
+    <input type="range" formControlName="peakPower" min="12" max="1479">{{carForm.get('peakPower').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Peak torque</label>
-    <input type="number" formControlName="peakTorque">
+    <input type="range" formControlName="peakTorque" min="13" max="1180">{{carForm.get('peakTorque').value}}
   </div>
   <div class="control-group">
     <label class="control-label">Engine position</label>
