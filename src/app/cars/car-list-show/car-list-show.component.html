@@ -1,6 +1,5 @@
 <div class="giveMeLine">
   <div [style.background-color]="carService.getCategoryColorByCarCost(car.cost)">{{car.cost}}</div>
-  <div>{{car.id}}</div>
   <div>{{car.factory}}</div>
   <div>{{car.name}}</div>
   <div>{{car.upgrade}}</div>
@@ -13,7 +12,7 @@
   <div>{{car.width}}</div>
   <div>{{car.height}}</div>
   <div>{{car.groundClearance}}</div>
-  <div class="property" [class.active]="car.tractionControl">TractionControl</div>
+  <div class="property" [class.active]="car.tractionControl">TC</div>
   <div class="property" [class.active]="car.abs">ABS</div>
   <div>{{car.peakPower}}</div>
   <div>{{car.peakTorque}}</div>

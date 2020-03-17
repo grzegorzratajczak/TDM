@@ -2,7 +2,6 @@
 
 <div class="giveMeLine">
   <div>Cost</div>
-  <div>id</div>
   <div>factory</div>
   <div>name</div>
   <div>upgrade</div>
@@ -29,8 +28,11 @@
 
 
 <div *ngFor="let car of cars">
+  ----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------
   <app-car-list-show [car]="car"></app-car-list-show>
-  <div>
-    <button (click)="deleteCarFromList(car)">Usuń</button>
-  </div>
+<!--  <div>-->
+<!--    <button (click)="deleteCarFromList(car)">Usuń</button>-->
+<!--  </div>-->
 </div>

@@ -103,6 +103,32 @@
       "seatCount": 4,
       "productionYear": 1974,
       "country": "JP"
+    },
+    {
+      "id": 8,
+      "factory": "Dodge",
+      "name": "Viper",
+      "cost": 24,
+      "upgrade": "323",
+      "tyreType": "Performance",
+      "topSpeed": 208,
+      "acceleration": 3.8,
+      "handling": 82,
+      "driveTraction": "FWD",
+      "weight": 1290,
+      "width": 1.4,
+      "height": 1.4,
+      "groundClearance": "Medium",
+      "tractionControl": false,
+      "abs": true,
+      "peakPower": 532,
+      "peakTorque": 407,
+      "enginePosition": "FRONT",
+      "fuel": "Petrol",
+      "bodyStyle": "Sedan",
+      "seatCount": 5,
+      "productionYear": 1993,
+      "country": "US"
     }
   ]
 }
