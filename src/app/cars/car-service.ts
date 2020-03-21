@@ -3,7 +3,9 @@ import {Car, CarAttrs} from './car';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {map} from 'rxjs/operators';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class CarService {
 
   constructor(private httpClient: HttpClient) {
