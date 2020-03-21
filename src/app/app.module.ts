@@ -7,6 +7,7 @@ import {CarsModule} from './cars/cars.module';
 import {CarService} from './cars/car-service';
 import {HttpClientModule} from '@angular/common/http';
 import {CarPropertiesService} from './cars/car-properties.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {CarPropertiesService} from './cars/car-properties.service';
     BrowserModule,
     AppRoutingModule,
     CarsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [CarService, CarPropertiesService],
   bootstrap: [AppComponent]
