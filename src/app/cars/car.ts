@@ -53,8 +53,8 @@ export class Car {
   seatCount: number;
   productionYear: number;
   country: string;
-
-  constructor(carAttrs: Partial<Car> = {}) {
+// czy moze Partial<CarAttr> ??
+  constructor(carAttrs: Partial<CarAttrs> = {}) {
     this.id = carAttrs.id;
     this.factory = carAttrs.factory;
     this.name = carAttrs.name;

@@ -129,6 +129,32 @@
       "seatCount": 5,
       "productionYear": 1993,
       "country": "US"
+    },
+    {
+      "id": 9,
+      "factory": "Alfa Romeo",
+      "name": "ds",
+      "cost": 13,
+      "upgrade": "23",
+      "tyreType": "Performance",
+      "topSpeed": 152,
+      "acceleration": 13.8,
+      "handling": 72,
+      "driveTraction": "FWD",
+      "weight": 1995,
+      "width": 1.7,
+      "height": 1.4,
+      "groundClearance": "Low",
+      "tractionControl": true,
+      "abs": false,
+      "peakPower": 423,
+      "peakTorque": 264,
+      "enginePosition": "FRONT",
+      "fuel": "Petrol",
+      "bodyStyle": "Van",
+      "seatCount": 4,
+      "productionYear": 1963,
+      "country": "US"
     }
   ]
 }
