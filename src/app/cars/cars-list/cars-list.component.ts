@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarService} from '../car-service';
 import {Car, CarAttrs} from '../car';
 
@@ -10,8 +10,34 @@ import {Car, CarAttrs} from '../car';
 export class CarsListComponent implements OnInit {
 
   cars: Car[] = [];
+  columnsToDisplay = [
+    'factory',
+    'name',
+    'cost',
+    'upgrade',
+    'tyreType',
+    'topSpeed',
+    'acceleration',
+    'handling',
+    'driveTraction',
+    'weight',
+    'width',
+    'height',
+    'groundClearance',
+    'tractionControl',
+    'abs',
+    'peakPower',
+    'peakTorque',
+    'enginePosition',
+    'fuel',
+    'bodyStyle',
+    'seatCount',
+    'productionYear',
+    'country',
+  ];
 
-  constructor(private carService: CarService) { }
+  constructor(private carService: CarService) {
+  }
 
   ngOnInit() {
     this.carService.getCars().subscribe({
@@ -22,8 +48,8 @@ export class CarsListComponent implements OnInit {
 
   deleteCarFromList(carAttrs: CarAttrs) {
     this.carService.deleteCar(carAttrs).subscribe({
-      next: () => this.cars.splice(carAttrs.id),
-      error: () => alert('Nie udało się usunąć auta')
+        next: () => this.cars.splice(carAttrs.id),
+        error: () => alert('Nie udało się usunąć auta')
       }
     );
     location.reload();

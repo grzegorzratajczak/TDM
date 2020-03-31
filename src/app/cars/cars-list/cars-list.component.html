@@ -35,3 +35,31 @@
     <button (click)="deleteCarFromList(car)">Usuń</button>
   </div>
 </div>
+
+<table mat-table [dataSource]="cars" style="width: 100%">
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+  <mat-text-column name="cost"></mat-text-column>
+  <mat-text-column name="factory"></mat-text-column>
+  <mat-text-column name="name"></mat-text-column>
+  <mat-text-column name="upgrade"></mat-text-column>
+  <mat-text-column name="tyreType"></mat-text-column>
+  <mat-text-column name="topSpeed"></mat-text-column>
+  <mat-text-column name="acceleration"></mat-text-column>
+  <mat-text-column name="handling"></mat-text-column>
+  <mat-text-column name="driveTraction"></mat-text-column>
+  <mat-text-column name="weight"></mat-text-column>
+  <mat-text-column name="width"></mat-text-column>
+  <mat-text-column name="height"></mat-text-column>
+  <mat-text-column name="groundClearance"></mat-text-column>
+  <mat-text-column name="tractionControl"></mat-text-column>
+  <mat-text-column name="abs"></mat-text-column>
+  <mat-text-column name="peakPower"></mat-text-column>
+  <mat-text-column name="peakTorque"></mat-text-column>
+  <mat-text-column name="enginePosition"></mat-text-column>
+  <mat-text-column name="fuel"></mat-text-column>
+  <mat-text-column name="bodyStyle"></mat-text-column>
+  <mat-text-column name="seatCount"></mat-text-column>
+  <mat-text-column name="productionYear"></mat-text-column>
+  <mat-text-column name="country"></mat-text-column>
+</table>

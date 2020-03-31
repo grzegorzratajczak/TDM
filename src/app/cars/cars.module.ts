@@ -5,14 +5,16 @@ import { AddCarComponent } from './add-car/add-car.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CarShowComponent } from './car-show/car-show.component';
 import { CarListShowComponent } from './car-list-show/car-list-show.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
   declarations: [CarsListComponent, AddCarComponent, CarShowComponent, CarListShowComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatTableModule,
+    ],
   exports: [CarsListComponent]
 })
 export class CarsModule { }
