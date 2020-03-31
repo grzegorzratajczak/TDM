@@ -1,45 +1,13 @@
 <h2>Lista twoich aut</h2>
 
-<div class="giveMeLine">
-  <div>Cost</div>
-  <div>Factory</div>
-  <div>Name</div>
-  <div>Upgrade</div>
-  <div>TyreType</div>
-  <div>TopSpeed</div>
-  <div>Acceleration</div>
-  <div>Handling</div>
-  <div>Traction</div>
-  <div>Weight</div>
-  <div>Width</div>
-  <div>Height</div>
-  <div>Clearance</div>
-  <div>TrControl</div>
-  <div>ABS</div>
-  <div>Power</div>
-  <div>Torque</div>
-  <div>EnginePos</div>
-  <div>Fuel</div>
-  <div>Body</div>
-  <div>Seats</div>
-  <div>Year</div>
-  <div>Country</div>
-</div>
-
-
-<div *ngFor="let car of cars">
-  <hr>
-  <app-car-list-show [car]="car"></app-car-list-show>
-  <div>
-    <button (click)="editCar(car)">Edytuj</button>
-    <button (click)="deleteCarFromList(car)">Usuń</button>
-  </div>
-</div>
-
 <table mat-table [dataSource]="cars" style="width: 100%">
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
   <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
-  <mat-text-column name="cost"></mat-text-column>
+  <ng-container matColumnDef="cost">
+    <th mat-header-cell *matHeaderCellDef> Cost </th>
+    <td mat-cell *matCellDef="let cars"
+        [style.background-color]="carService.getCategoryColorByCarCost(cars.cost)"> {{cars.cost}} </td>
+  </ng-container>
   <mat-text-column name="factory"></mat-text-column>
   <mat-text-column name="name"></mat-text-column>
   <mat-text-column name="upgrade"></mat-text-column>
@@ -52,8 +20,14 @@
   <mat-text-column name="width"></mat-text-column>
   <mat-text-column name="height"></mat-text-column>
   <mat-text-column name="groundClearance"></mat-text-column>
-  <mat-text-column name="tractionControl"></mat-text-column>
-  <mat-text-column name="abs"></mat-text-column>
+  <ng-container matColumnDef="tractionControl">
+    <th mat-header-cell *matHeaderCellDef> TractionControl </th>
+    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.tractionControl">TC</div> </td>
+  </ng-container>
+  <ng-container matColumnDef="abs">
+    <th mat-header-cell *matHeaderCellDef> ABS </th>
+    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.abs">ABS</div> </td>
+  </ng-container>
   <mat-text-column name="peakPower"></mat-text-column>
   <mat-text-column name="peakTorque"></mat-text-column>
   <mat-text-column name="enginePosition"></mat-text-column>
@@ -62,4 +36,11 @@
   <mat-text-column name="seatCount"></mat-text-column>
   <mat-text-column name="productionYear"></mat-text-column>
   <mat-text-column name="country"></mat-text-column>
+  <ng-container matColumnDef="options">
+    <th mat-header-cell *matHeaderCellDef> options </th>
+    <td mat-cell *matCellDef="let cars">
+    <button (click)="editCar(cars)">Edytuj</button>
+    <button (click)="deleteCarFromList(cars)">Usuń</button>
+    </td>
+  </ng-container>
 </table>

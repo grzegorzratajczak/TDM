@@ -17,3 +17,11 @@ div div {
   display: flex;
   justify-content: center;
 }
+
+.property {
+  color: gray;
+}
+
+.property.active {
+  color: gold;
+}

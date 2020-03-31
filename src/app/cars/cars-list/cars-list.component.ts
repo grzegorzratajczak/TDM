@@ -11,9 +11,9 @@ export class CarsListComponent implements OnInit {
 
   cars: Car[] = [];
   columnsToDisplay = [
+    'cost',
     'factory',
     'name',
-    'cost',
     'upgrade',
     'tyreType',
     'topSpeed',
@@ -34,6 +34,7 @@ export class CarsListComponent implements OnInit {
     'seatCount',
     'productionYear',
     'country',
+    'options',
   ];
 
   constructor(private carService: CarService) {
