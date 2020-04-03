@@ -83,14 +83,14 @@
 
 <!--  column tractionControl-->
   <ng-container matColumnDef="tractionControl">
-    <th mat-header-cell *matHeaderCellDef>TrackControl</th>
-    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.tractionControl">TC</div> </td>
+    <th mat-header-cell *matHeaderCellDef>ESP</th>
+    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.tractionControl"><mat-icon>done</mat-icon></div> </td>
   </ng-container>
 
 <!--  column ABS-->
   <ng-container matColumnDef="abs">
     <th mat-header-cell *matHeaderCellDef>ABS</th>
-    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.abs">ABS</div> </td>
+    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.abs"><mat-icon>done</mat-icon></div></td>
   </ng-container>
 
   <!--  column peakPower-->
