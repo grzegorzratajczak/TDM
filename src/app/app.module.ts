@@ -8,18 +8,20 @@ import {CarService} from './cars/car-service';
 import {HttpClientModule} from '@angular/common/http';
 import {CarPropertiesService} from './cars/car-properties.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CarsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CarsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule
+    ],
   providers: [CarService, CarPropertiesService],
   bootstrap: [AppComponent]
 })

@@ -36,16 +36,13 @@ export class CarsListComponent implements OnInit {
     'country',
     'options',
   ];
-  atrToSort: number = 10;
+  atrCostToSort = 10;
 
   constructor(private carService: CarService) {
   }
 
   ngOnInit() {
-    this.carService.getCars().subscribe({
-      next: (cars) => this.cars = cars,
-      error: () => alert('Nie udało się pobrać listy aut')
-    });
+  this.getCarsList();
   }
 
   deleteCarFromList(carAttrs: CarAttrs) {
@@ -59,5 +56,22 @@ export class CarsListComponent implements OnInit {
 
   editCar(car: Car) {
 
+  }
+
+  sortCarsListByCost(atrToSort: number) {
+    const tempCars = [];
+    for (const car of this.cars) {
+      if (car.cost.toString() === atrToSort.toString()) {
+        tempCars.push(car);
+      }
+    }
+    this.cars = tempCars;
+  }
+
+  getCarsList() {
+    this.carService.getCars().subscribe({
+      next: (cars) => this.cars = cars,
+      error: () => alert('Nie udało się pobrać listy aut')
+    });
   }
 }

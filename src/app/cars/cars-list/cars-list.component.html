@@ -1,7 +1,5 @@
 <h2>Lista twoich aut</h2>
 
-<input matInput [value]="atrToSort"><button mat-button>Koszt</button>
-
 <table mat-table [dataSource]="cars" style="width: 100%">
 
 <!--  column cost-->
@@ -159,3 +157,7 @@
   <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
 
 </table>
+
+<input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2">
+<button mat-button (click)="sortCarsListByCost(atrCostToSort)">Koszt</button>
+<button mat-button (click)="getCarsList()"><mat-icon>refresh</mat-icon></button>
