@@ -36,6 +36,7 @@ export class CarsListComponent implements OnInit {
     'country',
     'options',
   ];
+  atrToSort: number = 10;
 
   constructor(private carService: CarService) {
   }

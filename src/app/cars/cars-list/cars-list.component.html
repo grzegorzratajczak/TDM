@@ -1,5 +1,7 @@
 <h2>Lista twoich aut</h2>
 
+<input matInput [value]="atrToSort"><button mat-button>Koszt</button>
+
 <table mat-table [dataSource]="cars" style="width: 100%">
 
 <!--  column cost-->
@@ -36,13 +38,13 @@
   <!--  column topSpeed-->
   <ng-container matColumnDef="topSpeed">
     <th mat-header-cell *matHeaderCellDef>TopSpeed</th>
-    <td mat-cell *matCellDef="let cars">{{cars.topSpeed}}</td>
+    <td mat-cell *matCellDef="let cars">{{cars.topSpeed}} mph</td>
   </ng-container>
 
   <!--  column acceleration-->
   <ng-container matColumnDef="acceleration">
     <th mat-header-cell *matHeaderCellDef>0-60</th>
-    <td mat-cell *matCellDef="let cars">{{cars.acceleration}}</td>
+    <td mat-cell *matCellDef="let cars">{{cars.acceleration}} s</td>
   </ng-container>
 
   <!--  column handling-->
@@ -147,8 +149,8 @@
   <ng-container matColumnDef="options">
     <th mat-header-cell *matHeaderCellDef>options</th>
     <td mat-cell *matCellDef="let cars">
-    <button (click)="editCar(cars)">Edytuj</button>
-    <button (click)="deleteCarFromList(cars)">Usuń</button>
+    <button mat-button (click)="editCar(cars)">Edytuj</button>
+    <button mat-button (click)="deleteCarFromList(cars)">Usuń</button>
     </td>
   </ng-container>
 
