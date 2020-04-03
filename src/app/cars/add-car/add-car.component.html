@@ -21,7 +21,7 @@
   </div>
   <div class="control-group">
     <label class="control-label">Upgrade</label>
-    <input type="text" formControlName="upgrade">
+    <input type="text" formControlName="upgrade" maxlength="3">
   </div>
   <div class="control-group">
     <label class="control-label">Tyre type</label>
@@ -76,13 +76,13 @@
   </div>
   <div class="control-group">
     <label class="control-label">Traction Control</label>
-    <input type="radio" formControlName="tractionControl" [value]="true">
-    <input type="radio" formControlName="tractionControl" [value]="false">
+    <input type="radio" formControlName="tractionControl" [value]="true">T
+    <input type="radio" formControlName="tractionControl" [value]="false">F
   </div>
   <div class="control-group">
     <label class="control-label">ABS</label>
-    <input type="radio" formControlName="abs" [value]="true">
-    <input type="radio" formControlName="abs" [value]="false">
+    <input type="radio" formControlName="abs" [value]="true">T
+    <input type="radio" formControlName="abs" [value]="false">F
   </div>
   <div class="control-group">
     <label class="control-label">Peak power</label>
