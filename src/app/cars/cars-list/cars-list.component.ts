@@ -69,7 +69,7 @@ export class CarsListComponent implements OnInit {
     });
   }
 
-  sortCarsListByCost(atrToSort: number) {
+  filterCarsListByCost(atrToSort: number) {
     const tempCars = [];
     for (const car of this.cars) {
       if (car.cost.toString() === atrToSort.toString()) {
@@ -79,7 +79,7 @@ export class CarsListComponent implements OnInit {
     this.cars = tempCars;
   }
 
-  sortCarsListByTyreType(atrTyreType: any) {
+  filterCarsListByTyreType(atrTyreType: any) {
     const tempCars = [];
     for (const car of this.cars) {
       if (car.tyreType.toString() === atrTyreType.toString()) {
@@ -89,7 +89,7 @@ export class CarsListComponent implements OnInit {
     this.cars = tempCars;
   }
 
-  sortCarsListForBadWeather() {
+  filterCarsListForBadWeather() {
     const tempCars = [];
     for (const car of this.cars) {
       if (car.tyreType.toString() === 'Standard') {
@@ -103,7 +103,7 @@ export class CarsListComponent implements OnInit {
     this.cars = tempCars;
   }
 
-  sortCarsListBy4WD() {
+  filterCarsListBy4WD() {
     const tempCars = [];
     for (const car of this.cars) {
       if (car.driveTraction.toString() === '4WD') {
