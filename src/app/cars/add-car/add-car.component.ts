@@ -34,7 +34,18 @@ export class AddCarComponent implements OnInit {
     this.driveTractions = this.carPropertiesService.driveTractions;
     this.bodyStyles = this.carPropertiesService.bodyStyles;
     this.enginePositions = this.carPropertiesService.enginePositions;
+    this.createNewFormGroup();
+  }
 
+  save(): void {
+    const carFromForm = this.carForm.value;
+    this.carService.saveCar(carFromForm).subscribe(
+      () => this.router.navigate(['../..']),
+      () => alert('Nie udało się zapisać auta')
+    );
+  }
+
+  createNewFormGroup() {
     this.carForm = new FormGroup({
       id: new FormControl(),
       factory: new FormControl('', Validators.required),
@@ -62,13 +73,4 @@ export class AddCarComponent implements OnInit {
       country: new FormControl('', Validators.required)
     });
   }
-
-  save(): void {
-    const carAttrs = this.carForm.value;
-    this.carService.saveCar(carAttrs).subscribe(
-      () => this.router.navigate(['../..']),
-      () => alert('Nie udało się zapisać auta')
-    );
-  }
-
 }
