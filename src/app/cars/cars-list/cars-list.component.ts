@@ -62,6 +62,13 @@ export class CarsListComponent implements OnInit {
 
   }
 
+  getCarsList() {
+    this.carService.getCars().subscribe({
+      next: (cars) => this.cars = cars,
+      error: () => alert('Nie udało się pobrać listy aut')
+    });
+  }
+
   sortCarsListByCost(atrToSort: number) {
     const tempCars = [];
     for (const car of this.cars) {
@@ -72,17 +79,34 @@ export class CarsListComponent implements OnInit {
     this.cars = tempCars;
   }
 
-  getCarsList() {
-    this.carService.getCars().subscribe({
-      next: (cars) => this.cars = cars,
-      error: () => alert('Nie udało się pobrać listy aut')
-    });
-  }
-
   sortCarsListByTyreType(atrTyreType: any) {
     const tempCars = [];
     for (const car of this.cars) {
       if (car.tyreType.toString() === atrTyreType.toString()) {
+        tempCars.push(car);
+      }
+    }
+    this.cars = tempCars;
+  }
+
+  sortCarsListForBadWeather() {
+    const tempCars = [];
+    for (const car of this.cars) {
+      if (car.tyreType.toString() === 'Standard') {
+        tempCars.push(car);
+      } else if (car.tyreType.toString() === 'All-surface') {
+        tempCars.push(car);
+      } else if (car.tyreType.toString() === 'Off-road') {
+        tempCars.push(car);
+      }
+    }
+    this.cars = tempCars;
+  }
+
+  sortCarsListBy4WD() {
+    const tempCars = [];
+    for (const car of this.cars) {
+      if (car.driveTraction.toString() === '4WD') {
         tempCars.push(car);
       }
     }

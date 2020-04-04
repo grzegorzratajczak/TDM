@@ -1,9 +1,16 @@
 <h2>Lista twoich aut</h2>
 
 <div>
+
   <div>
-    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2">
-    <button mat-button (click)="sortCarsListByCost(atrCostToSort)">Koszt</button>
+    <button mat-button (click)="getCarsList()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2" width="2">
+    <button mat-button (click)="sortCarsListByCost(atrCostToSort)"><mat-icon>done</mat-icon></button>
   </div>
 
   <div>
@@ -15,14 +22,11 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <button mat-button (click)="sortCarsListByTyreType(atrTyreType)">Tyre</button>
+    <button mat-button (click)="sortCarsListByTyreType(atrTyreType)"><mat-icon>done</mat-icon></button>
   </div>
 
-  <div>
-    <button mat-button (click)="getCarsList()">
-      <mat-icon>refresh</mat-icon>
-    </button>
-  </div>
+  <div><button mat-button (click)="sortCarsListForBadWeather()">Bad Weather</button></div>
+  <div><button mat-button (click)="sortCarsListBy4WD()">4WD</button></div>
 </div>
 
 <table mat-table [dataSource]="cars" style="width: 100%">
