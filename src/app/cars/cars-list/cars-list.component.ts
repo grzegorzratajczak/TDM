@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {CarService} from '../car-service';
 import {Car, CarAttrs} from '../car';
 import {CarPropertiesService} from '../car-properties.service';
+import {SimpleAskDialogComponent} from '../../dialogs/simple-ask-dialog/simple-ask-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-car-list',
@@ -41,7 +43,7 @@ export class CarsListComponent implements OnInit {
   tyreTypes;
   atrTyreType: any;
 
-  constructor(private carService: CarService, private carPropertiesService: CarPropertiesService) {
+  constructor(private carService: CarService, private carPropertiesService: CarPropertiesService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -59,7 +61,14 @@ export class CarsListComponent implements OnInit {
   }
 
   editCar(car: Car) {
+    const dialogRef = this.dialog.open(SimpleAskDialogComponent, {
+      width: '250px',
+      data: {content: car.name, question: 'Usunąć auto?'}
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   getCarsList() {
