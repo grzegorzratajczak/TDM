@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CarService} from '../car-service';
 import {Car, CarAttrs} from '../car';
+import {CarPropertiesService} from '../car-properties.service';
 
 @Component({
   selector: 'app-car-list',
@@ -37,12 +38,15 @@ export class CarsListComponent implements OnInit {
     'options',
   ];
   atrCostToSort = 10;
+  tyreTypes;
+  atrTyreType: any;
 
-  constructor(private carService: CarService) {
+  constructor(private carService: CarService, private carPropertiesService: CarPropertiesService) {
   }
 
   ngOnInit() {
-  this.getCarsList();
+    this.getCarsList();
+    this.tyreTypes = this.carPropertiesService.tyreTypes;
   }
 
   deleteCarFromList(carAttrs: CarAttrs) {
@@ -73,5 +77,15 @@ export class CarsListComponent implements OnInit {
       next: (cars) => this.cars = cars,
       error: () => alert('Nie udało się pobrać listy aut')
     });
+  }
+
+  sortCarsListByTyreType(atrTyreType: any) {
+    const tempCars = [];
+    for (const car of this.cars) {
+      if (car.tyreType.toString() === atrTyreType.toString()) {
+        tempCars.push(car);
+      }
+    }
+    this.cars = tempCars;
   }
 }

@@ -1,8 +1,33 @@
 <h2>Lista twoich aut</h2>
 
+<div>
+  <div>
+    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2">
+    <button mat-button (click)="sortCarsListByCost(atrCostToSort)">Koszt</button>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Tyre Type</mat-label>
+      <mat-select [(ngModel)]="atrTyreType" name="tyreType">
+        <mat-option *ngFor="let tyreType of tyreTypes" [value]="tyreType">
+          {{tyreType}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button (click)="sortCarsListByTyreType(atrTyreType)">Tyre</button>
+  </div>
+
+  <div>
+    <button mat-button (click)="getCarsList()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+</div>
+
 <table mat-table [dataSource]="cars" style="width: 100%">
 
-<!--  column cost-->
+  <!--  column cost-->
   <ng-container matColumnDef="cost">
     <th mat-header-cell *matHeaderCellDef>Cost</th>
     <td mat-cell *matCellDef="let cars"
@@ -81,16 +106,24 @@
     <td mat-cell *matCellDef="let cars">{{cars.groundClearance}}</td>
   </ng-container>
 
-<!--  column tractionControl-->
+  <!--  column tractionControl-->
   <ng-container matColumnDef="tractionControl">
     <th mat-header-cell *matHeaderCellDef>ESP</th>
-    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.tractionControl"><mat-icon>swap_calls</mat-icon></div> </td>
+    <td mat-cell *matCellDef="let cars">
+      <div class="property" [class.active]="cars.tractionControl">
+        <mat-icon>swap_calls</mat-icon>
+      </div>
+    </td>
   </ng-container>
 
-<!--  column ABS-->
+  <!--  column ABS-->
   <ng-container matColumnDef="abs">
     <th mat-header-cell *matHeaderCellDef>ABS</th>
-    <td mat-cell *matCellDef="let cars"> <div class="property" [class.active]="cars.abs"><mat-icon>shutter_speed</mat-icon></div></td>
+    <td mat-cell *matCellDef="let cars">
+      <div class="property" [class.active]="cars.abs">
+        <mat-icon>shutter_speed</mat-icon>
+      </div>
+    </td>
   </ng-container>
 
   <!--  column peakPower-->
@@ -143,21 +176,17 @@
     <td mat-cell *matCellDef="let cars">{{cars.country}}</td>
   </ng-container>
 
-<!--  column options-->
+  <!--  column options-->
   <ng-container matColumnDef="options">
     <th mat-header-cell *matHeaderCellDef>options</th>
     <td mat-cell *matCellDef="let cars">
-    <button mat-button (click)="editCar(cars)">Edytuj</button>
-    <button mat-button (click)="deleteCarFromList(cars)">Usuń</button>
+      <button mat-button (click)="editCar(cars)">Edytuj</button>
+      <button mat-button (click)="deleteCarFromList(cars)">Usuń</button>
     </td>
   </ng-container>
 
-<!--  table header with columns row-->
+  <!--  table header with columns row-->
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
   <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
 
 </table>
-
-<input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2">
-<button mat-button (click)="sortCarsListByCost(atrCostToSort)">Koszt</button>
-<button mat-button (click)="getCarsList()"><mat-icon>refresh</mat-icon></button>

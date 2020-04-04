@@ -8,6 +8,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatButtonModule,
     FormsModule,
+    MatSelectModule,
   ],
   exports: [CarsListComponent]
 })
