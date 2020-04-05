@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {CarAttrs} from '../../cars/car';
 
 @Component({
   selector: 'app-simple-ask-dialog',
@@ -14,9 +15,13 @@ export class SimpleAskDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
 
 export interface SimpleAskDialogData {
-  content: string;
+  content: CarAttrs;
   question: string;
 }

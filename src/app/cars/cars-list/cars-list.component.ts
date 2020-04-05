@@ -60,14 +60,14 @@ export class CarsListComponent implements OnInit {
     location.reload();
   }
 
-  editCar(car: Car) {
+  openDeleteCarDialog(carAttrs: CarAttrs) {
     const dialogRef = this.dialog.open(SimpleAskDialogComponent, {
       width: '250px',
-      data: {content: car.name, question: 'Usunąć auto?'}
+      data: {content: carAttrs, question: 'Usunąć auto?'}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      this.deleteCarFromList(result);
     });
   }
 
@@ -120,5 +120,9 @@ export class CarsListComponent implements OnInit {
       }
     }
     this.cars = tempCars;
+  }
+
+  editCar(carAttrs: CarAttrs) {
+
   }
 }

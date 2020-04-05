@@ -1,1 +1,11 @@
-<p>simple-ask-dialog works!</p>
+<div mat-dialog-content>
+  <p>{{data.question}}</p>
+  <mat-form-field>
+    <mat-label>Car to delete</mat-label>
+    <input matInput [(ngModel)]="data.content.name">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.content" cdkFocusInitial>Ok</button>
+</div>

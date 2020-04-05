@@ -185,7 +185,7 @@
     <th mat-header-cell *matHeaderCellDef>options</th>
     <td mat-cell *matCellDef="let cars">
       <button mat-button (click)="editCar(cars)">Edytuj</button>
-      <button mat-button (click)="deleteCarFromList(cars)">Usuń</button>
+      <button mat-button (click)="openDeleteCarDialog(cars)">Usuń</button>
     </td>
   </ng-container>
 
