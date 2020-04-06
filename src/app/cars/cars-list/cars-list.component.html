@@ -9,12 +9,12 @@
   </div>
 
   <div>
-    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center" maxlength="2" width="2">
+    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center; width: 60px" maxlength="2" width="2">
     <button mat-button (click)="filterCarsListByCost(atrCostToSort)"><mat-icon>done</mat-icon></button>
   </div>
 
   <div>
-    <mat-form-field>
+    <mat-form-field style="width: 100px">
       <mat-label>Tyre Type</mat-label>
       <mat-select [(ngModel)]="atrTyreType" name="tyreType">
         <mat-option *ngFor="let tyreType of tyreTypes" [value]="tyreType">
