@@ -10,15 +10,9 @@
 
   <div class="costGroup">
     <span *ngFor="let number of [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]">
-      <button>{{number}}</button>
+      <button [style.background-color]="carService.getCategoryColorByCarCost(number)"
+              (click)="filterCarsListByCost(number)">{{number}}</button>
     </span>
-  </div>
-
-  <div>
-    <input matInput [(ngModel)]="atrCostToSort" style="text-align: center; width: 60px" maxlength="2" width="2">
-    <button mat-button (click)="filterCarsListByCost(atrCostToSort)">
-      <mat-icon>done</mat-icon>
-    </button>
   </div>
 
   <div>

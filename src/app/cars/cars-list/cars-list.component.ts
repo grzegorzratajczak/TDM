@@ -39,7 +39,6 @@ export class CarsListComponent implements OnInit {
     'country',
     'options',
   ];
-  atrCostToSort = 10;
   tyreTypes;
   atrTyreType: any;
 
